@@ -5,9 +5,11 @@ RUN bio pkg install --binlink --binlink-dir /bin --force \
         core/bzip2 \
         core/gzip \
         core/tar \
+        core/xz \
     && bio pkg binlink core/bzip2 --dest /usr/bin --force \
     && bio pkg binlink core/gzip --dest /usr/bin --force \
     && bio pkg binlink core/tar --dest /usr/bin --force \
+    && bio pkg binlink core/xz --dest /usr/bin --force \
     && rm -r /hab/cache/artifacts
 
 # install backup tools
