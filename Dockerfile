@@ -18,4 +18,5 @@ RUN bio pkg install --binlink \
         core/mysql-client \
         core/postgresql11-client \
         core/restic \
+        jarvus/rclone \
     && rm -r /hab/cache/artifacts
