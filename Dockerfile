@@ -16,7 +16,7 @@ RUN bio pkg install --binlink --binlink-dir /bin --force \
 RUN bio pkg install --binlink \
         core/kubectl \
         core/mysql-client \
-        core/postgresql11-client \
+        core/postgresql13-client \
         core/restic \
         jarvus/rclone \
     && rm -r /hab/cache/artifacts
