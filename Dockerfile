@@ -1,4 +1,4 @@
-FROM biomesh/bio-x86_64-linux:1.6.372
+FROM biomesh/bio-x86_64-linux:1.6.821
 
 # replace busybox gzip/bzip2/tar with full GNU versions at both /bin and /usr/bin
 RUN bio pkg install --binlink --binlink-dir /bin --force \
@@ -16,7 +16,7 @@ RUN bio pkg install --binlink --binlink-dir /bin --force \
 RUN bio pkg install --binlink \
         core/kubectl \
         core/mysql-client \
-        core/postgresql13-client \
-        jarvus/restic/0.15.1 \
+        core/postgresql17-client \
+        core/restic \
         jarvus/rclone \
     && rm -r /hab/cache/artifacts
