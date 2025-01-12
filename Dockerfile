@@ -16,7 +16,9 @@ RUN bio pkg install --binlink --binlink-dir /bin --force \
 RUN bio pkg install --binlink \
         core/kubectl \
         core/mysql-client \
-        core/postgresql17-client \
         core/restic \
         jarvus/rclone \
+    && bio pkg install --binlink \
+        --channel LTS-2024 \
+        core/postgresql17-client \
     && rm -r /hab/cache/artifacts
